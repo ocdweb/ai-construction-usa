@@ -454,10 +454,6 @@ src="https://www.facebook.com/tr?id=667706974859686&ev=PageView&noscript=1"
             <input type="email" name="email" placeholder="james@smithbuilds.com" required autocomplete="email">
           </div>
           <div class="field">
-            <label>Mobile Number *</label>
-            <input type="tel" name="phone" placeholder="(555) 123-4567" required autocomplete="tel">
-          </div>
-          <div class="field">
             <label>Company Name *</label>
             <input type="text" name="company" placeholder="Smith Builds LLC" required autocomplete="organization">
           </div>
@@ -689,10 +685,6 @@ src="https://www.facebook.com/tr?id=667706974859686&ev=PageView&noscript=1"
               <div class="field">
                 <label>Email Address *</label>
                 <input type="email" name="email" placeholder="james@smithbuilds.com" required autocomplete="email">
-              </div>
-              <div class="field">
-                <label>Mobile Number *</label>
-                <input type="tel" name="phone" placeholder="(555) 123-4567" required autocomplete="tel">
               </div>
               <div class="field">
                 <label>Company Name *</label>
@@ -941,7 +933,6 @@ function handleSubmit(e) {
   var params = new URLSearchParams();
   params.append('name',    val('name'));
   params.append('email',   val('email'));
-  params.append('phone',   val('phone'));
   params.append('company', val('company'));
   params.append('source',  'ai-webinar-landing-usa');
 
