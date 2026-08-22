@@ -430,8 +430,6 @@ src="https://www.facebook.com/tr?id=667706974859686&ev=PageView&noscript=1"
       <span style="opacity:.4">&middot;</span>
       <span>Live workshop, not a recording</span>
       <span style="opacity:.4">&middot;</span>
-      <span>US construction only</span>
-      <span style="opacity:.4">&middot;</span>
       <span>Limited spots</span>
     </div>
   </div>
@@ -560,7 +558,6 @@ src="https://www.facebook.com/tr?id=667706974859686&ev=PageView&noscript=1"
         <ul class="fy-list">
           <li>You're not in the construction industry</li>
           <li>You think AI is just hype, we're going to show real, working systems</li>
-          <li>You're not based in the US</li>
           <li>You're not open to changing how you currently do marketing</li>
         </ul>
       </div>
@@ -724,26 +721,32 @@ function scrollToForm() {
 }
 
 // ════════════════════════════════════════════════════════════════════
-// EVENT DETAILS — PLACEHOLDER, NOT CONFIRMED YET
+// EVENT DETAILS — CONFIRMED
 //
-// The September date and time are not locked in. Confirm them with
-// Josh, then update this one block and every date on the page follows
-// (top bar, form sub-heading, FAQ answer, countdown timer):
+// CONFIRMED. The session is set from Melbourne: Thursday 17 September
+// 2026, 8:00 AM AEST. In US terms that is the DAY BEFORE, Wednesday 16
+// September, 6:00 PM ET / 3:00 PM PT. The page advertises US time
+// because the audience is US, so it reads Wednesday, not Thursday.
 //
-//   1. startISO    → the real US date and time, with the correct US UTC
-//                    offset (-04:00 Eastern daylight, -07:00 Pacific
-//                    daylight, and so on)
-//   2. displayText → how the date should read on the page, for example
-//                    'Thursday 17 September, 4:00 PM ET'
+// Everything on the page follows this one block (top bar, form
+// sub-heading, FAQ answer, countdown timer):
+//
+//   1. startISO    → the US date and time with the correct US UTC offset
+//                    (-04:00 Eastern daylight, -07:00 Pacific daylight)
+//   2. displayText → how the date reads on the page
 //   3. confirmed   → true, which switches the countdown timer on
+//
+// If the session ever moves past Sunday 4 October 2026, Melbourne goes
+// to AEDT (+11) and every US time above shifts an hour EARLIER, so the
+// conversion has to be redone, not just the date swapped.
 //
 // thank-you.html has the same block, and its calendar links and .ics
 // file are generated from it, so update that file too.
 // ════════════════════════════════════════════════════════════════════
 var EVENT = {
-  confirmed:   false,
-  startISO:    '2026-09-17T16:00:00-04:00',
-  displayText: 'September 2026, date & time to be confirmed'
+  confirmed:   true,
+  startISO:    '2026-09-16T18:00:00-04:00',
+  displayText: 'Wednesday 16 September, 6:00 PM ET (3:00 PM PT)'
 };
 
 // ── EVENT DATE COPY (fills every [data-event-date] on the page) ──
